@@ -2,8 +2,8 @@
 <head>
     <title>Barber</title>
     <link rel="stylesheet" href="style.css">
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="lightbox.css">
+    
 </head>
 <body>
     <div class="banner" id="home">
@@ -14,6 +14,7 @@
                     <li><a href="#home">Úvod</a></li>
                     <li><a href="#contact">Kontakt</a></li>
                     <li><a href="#price">Ceník</a></li>
+                    <li><a href="#gallery">Galerie</a></li>
                     
                 </ul>
             </nav>
@@ -40,7 +41,7 @@
     </div>
     <section class="about" id="contact">
         <div class="main">
-            <img src="barber.jpg">
+            <img src="images/barber.jpg">
             <div class="about-text">
                 <h1>Ferda Schmidbauer</h1>
                 <h5>+420 123 456 789</h5>
@@ -117,9 +118,51 @@
                 
             
         </div>
-        <div class="createdby">
-            <p>2022 © Filip Tomín</p>
-        </div>
+        
             
         </section>
+        <div class="pattern2">
+            <div class="sectionName">
+                <h1>Galerie</h1>
+            </div>
+        </div>
+        <section class="galerie" id="gallery">
+            <div class="gallerytainer">
+                <div class="gallery">
+                    <a href="images/1.jpg" data-lightbox="models" data-title="Obrázek 1">
+                        <img src="images/1.jpg" >
+                    </a>
+                    <a href="images/2.jpg" data-lightbox="models" data-title="Obrázek 2">
+                        <img src="images/2.jpg" >
+                    </a>
+                    <a href="images/3.jpg" data-lightbox="models" data-title="Obrázek 3">
+                        <img src="images/3.jpg" >
+                    </a>
+                    <a href="images/4.jpg" data-lightbox="models" data-title="Obrázek 4">
+                        <img src="images/4.jpg" >
+                    </a>
+                    <a href="images/5.jpg" data-lightbox="models" data-title="Obrázek 5">
+                        <img src="images/5.jpg" >
+                    </a>
+                    <a href="images/6.jpg" data-lightbox="models" data-title="Obrázek 6">
+                        <img src="images/6.jpg" >
+                    </a>
+                    <a href="images/7.jpg" data-lightbox="models" data-title="Obrázek 7">
+                        <img src="images/7.jpg" >
+                    </a>
+                    <a href="images/8.jpg" data-lightbox="models" data-title="Obrázek 8">
+                        <img src="images/8.jpg" >
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+            <div class="createdby">
+                <p>2022 © Filip Tomín</p>
+            </div>
+            <script src="lightbox-plus-jquery.js"></script>
+        </section>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
