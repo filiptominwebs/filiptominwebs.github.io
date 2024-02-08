@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -43,14 +45,20 @@
                 <h1>Ferdinand Schmidbauer</h1>
                 <h5>Barber</h5>
                 <p>Povídání o tobě. Co jsi vystudoval? Certifikáty? Kolik let zkušeností?</p>
-                <button type="button">Kontakt</button>
+                <button onclick="toggleModal()" type="button">Objednání</button>
+                <div class="background" onclick="toggleModal()"></div>
+                <div class="modal">
+                    <h2>Objednej se!</h2>
+                    <p>Instagram - <a href="#">ferdinand_cut</a></p>
+                    <p>Telefonní číslo - <span>+420 776 459 640</span></p>
+                </div>
             </div>
         </div>
     </div>
     
     <script>
 
-
+        const toggleModal = () => document.body.classList.toggle("open");
         function showSidebar(){
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'flex'
