@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500&display=swap" rel="stylesheet">
@@ -55,7 +59,95 @@
             </div>
         </div>
     </div>
-    
+    <div class="divider">
+        <div class="content">
+            <h1>Ceník <span>služeb</span></h1>
+        </div>
+    </div>
+    <div class="prices">
+        <div class="content">
+            <table>
+                <thead>
+                  <tr>
+                    <th>Služba</th>
+                    <th>Cena</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Pánský střih strojkem</td>
+                    <td>200 Kč</td>
+                  </tr>
+                  <tr>
+                    <td>Pánský střih na Havla</td>
+                    <td>200 Kč</td>
+                  </tr>
+                  <tr>
+                    <td>Pánský střih do ztracena</td>
+                    <td>250 Kč</td>
+                  </tr>
+                  <tr>
+                    <td>Střih + úprava vousů</td>
+                    <td>450 Kč</td>
+                  </tr>
+                  <tr>
+                    <td>Úprava vousů</td>
+                    <td>200 Kč</td>
+                  </tr>
+                  <tr>
+                    <td>Pánský moderní střih</td>
+                    <td>300 Kč</td>
+                  </tr>
+                  <tr>
+                    <td>Dětský střih (pod 14 let)</td>
+                    <td>150 Kč</td>
+                  </tr>
+                  <tr>
+                    <td>Dámský krátký střih</td>
+                    <td>300 Kč</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+    <div class="divider-2">
+        <div class="content">
+            <h1>Galerie <span>střihů</span></h1>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="content">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div
+                    class="swiper-slide"
+                    style="background-image: url('babi2.png')"
+                  ></div>
+                  <div
+                    class="swiper-slide"
+                    style="background-image: url('istyle2.png')"
+                  ></div>
+                  <div
+                    class="swiper-slide"
+                    style="background-image: url('mikyjunior2.png')"
+                  ></div>
+                  <div
+                    class="swiper-slide"
+                    style="background-image: url('mikysenior1.png')"
+                  ></div>
+                  <div
+                    class="swiper-slide"
+                    style="background-image: url('tata2.png')"
+                  ></div>
+                  <div
+                    class="swiper-slide"
+                    style="background-image: url('tata3.png')"
+                  ></div>
+                </div>
+              </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
 
         const toggleModal = () => document.body.classList.toggle("open");
@@ -67,6 +159,21 @@
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'none'
         }
+        var swiper = new Swiper(".swiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 3,
+        speed: 600,
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        loop: true,
+        });
        
     </script>
 </body>
