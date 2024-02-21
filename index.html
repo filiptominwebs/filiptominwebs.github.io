@@ -40,8 +40,8 @@
     </div>
     <div class="about">
         <div class="main">
-            <img src="barber.png">
-            <div class="about-text">
+            <img class="reveal" src="barber.png">
+            <div class="about-text reveal">
                 <h1>Ferdinand Schmidbauer</h1>
                 <h5>Barber</h5>
                 <p>Povídání o tobě. Co jsi vystudoval? Certifikáty? Kolik let zkušeností?</p>
@@ -115,16 +115,16 @@
         <div class="content">
             <div class="row">
                 <div class="column">
-                        <img src="babi2.png">
-                        <img src="istyle2.png">
+                        <img src="pic1.png" loading="lazy">
+                        <img src="pic2.png" loading="lazy">
                 </div>
                 <div class="column">
-                        <img src="tata2.png">
-                        <img src="tata3.png">
+                        <img src="pic3.png" loading="lazy">
+                        <img src="pic4.png" loading="lazy">
                 </div>
                 <div class="column">
-                        <img src="mikyjunior2.png">
-                        <img src="mikysenior1.png">
+                        <img src="pic5.png" loading="lazy">
+                        <img src="pic6.png" loading="lazy">
                 </div>
               </div>
         </div>
@@ -141,7 +141,17 @@
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'none'
         }
-       
+        function reveal(){
+            var reveals = document.querySelectorAll('.reveal')
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
     </script>
 </body>
 </html>
