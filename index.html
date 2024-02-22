@@ -19,14 +19,14 @@
                 <li><a href="#">Úvod</a></li>
                 <li><a href="#">O mně</a></li>
                 <li><a href="#">Ceník</a></li>
-                <li><a href="#">Kontakt</a></li>
+                <li><a href="#">Galerie</a></li>
             </ul>
             <ul>
                 <li><img class="logo" src="logo.png"></li>
                 <li class="hideOnMobile"><a href="#">Úvod</a></li>
                 <li class="hideOnMobile"><a href="#">O mně</a></li>
                 <li class="hideOnMobile"><a href="#">Ceník</a></li>
-                <li class="hideOnMobile"><a href="#">Kontakt</a></li>
+                <li class="hideOnMobile"><a href="#">Galerie</a></li>
                 <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="30" fill="#fffcc7"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
             </ul>
         </nav>
@@ -40,8 +40,8 @@
     </div>
     <div class="about">
         <div class="main">
-            <img class="reveal" src="barber.png">
-            <div class="about-text reveal">
+            <img class="reveal" loading="lazy" src="barber.jpg">
+            <div class="about-text reveal2">
                 <h1>Ferdinand Schmidbauer</h1>
                 <h5>Barber</h5>
                 <p>Povídání o tobě. Co jsi vystudoval? Certifikáty? Kolik let zkušeností?</p>
@@ -115,19 +115,24 @@
         <div class="content">
             <div class="row">
                 <div class="column">
-                        <img src="pic1.png" loading="lazy">
-                        <img src="pic2.png" loading="lazy">
+                        <img src="pic1.jpg" loading="lazy">
+                        <img src="pic2.jpg" loading="lazy">
                 </div>
                 <div class="column">
-                        <img src="pic3.png" loading="lazy">
-                        <img src="pic4.png" loading="lazy">
+                        <img src="pic3.jpg" loading="lazy">
+                        <img src="pic4.jpg" loading="lazy">
                 </div>
                 <div class="column">
-                        <img src="pic5.png" loading="lazy">
-                        <img src="pic6.png" loading="lazy">
+                        <img src="pic5.jpg" loading="lazy">
+                        <img src="pic6.jpg" loading="lazy">
                 </div>
               </div>
         </div>
+    </div>
+    <div class="footer">
+      <div class="content">
+        
+      </div>
     </div>
 
     <script>
@@ -140,17 +145,6 @@
         function hideSidebar(){
             const sidebar = document.querySelector('.sidebar')
             sidebar.style.display = 'none'
-        }
-        function reveal(){
-            var reveals = document.querySelectorAll('.reveal')
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add('active');
-                }
-            }
         }
     </script>
 </body>
